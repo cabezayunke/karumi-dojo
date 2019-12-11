@@ -16,6 +16,7 @@ class StringCalculatorTest {
             Pair("1", 1),
             Pair("1,2", 3)
     )
+
     private fun add(numbers: String): Int {
         if(numbers.isEmpty()) {
             return 0
@@ -29,7 +30,7 @@ class StringCalculatorTest {
     }
 
     @Test
-    fun testWithScenarios() {
+    fun testWithMultipleScenarios() {
         scenarios.forEach {scenario ->
             val result = add(scenario.first)
             assertEquals(scenario.second, result)
@@ -65,6 +66,11 @@ class StringCalculatorTest {
     fun testAddStringWithNewLine() {
         val result = add("11\n22\n33")
         assertEquals(66, result)
+    }
+    @Test
+    fun testAddStringWithNewLineAndComma() {
+        val result = add("11\n22,33")
+        assertEquals(67, result)
     }
     @Test
     fun testAddStringWithNewLineAtTheEnd() {
