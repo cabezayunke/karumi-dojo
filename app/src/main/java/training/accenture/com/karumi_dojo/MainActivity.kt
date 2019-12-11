@@ -9,4 +9,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
+
+    fun add(numbers: String): Int {
+        val parts = numbers.split(",")
+        switch
+    }
+
 }
