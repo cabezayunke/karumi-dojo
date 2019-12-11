@@ -78,6 +78,10 @@ class StringCalculatorTest {
         assertEquals(66, result)
     }
     @Test(expected = NumberFormatException::class)
+    fun testAddStringWithInvalidDelimeterShouldThrowError() {
+        add("1-2")
+    }
+    @Test(expected = NumberFormatException::class)
     fun testAddStringWithInvalidNumberShouldThrowError() {
         add("1,a")
     }
