@@ -11,14 +11,28 @@ import org.junit.Assert.*
  * See [testing documentation](http://d.android.com/tools/testing).
  */
 class StringCalculatorTest {
+    private val scenarios = listOf(
+            Pair("", 0),
+            Pair("1", 1),
+            Pair("1,2", 3)
+    )
     private fun add(numbers: String): Int {
         if(numbers.isEmpty()) {
             return 0
         }
-        val parts = numbers.split(",")
-        return when(parts.size) {
+        val parts = numbers.split(",", "\n")
+        val ints = parts.map { n -> if (n.isEmpty()) 0 else n.toInt() }
+        return when(ints.size) {
             1 -> 1
-            else -> parts[0].toInt() + parts[1].toInt()
+            else -> ints.reduce { acc, n -> if(n < 0) throw Exception("negative numbers not allow") else acc + n }
+        }
+    }
+
+    @Test
+    fun testWithScenarios() {
+        scenarios.forEach {scenario ->
+            val result = add(scenario.first)
+            assertEquals(scenario.second, result)
         }
     }
 
@@ -38,17 +52,31 @@ class StringCalculatorTest {
         assertEquals(3, result)
     }
     @Test
-    fun testAddStringWithMoreThanTwoNumbersShouldAddOnlyFirstTwo() {
+    fun testAddStringWithThreeNumbers() {
         val result = add("1,2,3")
-        assertEquals(3, result)
+        assertEquals(6, result)
     }
     @Test
-    fun testAddStringWithInvalidNumberAtTheEndShouldWork() {
-        val result = add("1,2,a")
-        assertEquals(3, result)
+    fun testAddStringWithThreeLargerNumbers() {
+        val result = add("11,22,33")
+        assertEquals(66, result)
+    }
+    @Test
+    fun testAddStringWithNewLine() {
+        val result = add("11\n22\n33")
+        assertEquals(66, result)
+    }
+    @Test
+    fun testAddStringWithNewLineAtTheEnd() {
+        val result = add("11\n22\n33\n")
+        assertEquals(66, result)
     }
     @Test(expected = NumberFormatException::class)
     fun testAddStringWithInvalidNumberShouldThrowError() {
         add("1,a")
+    }
+    @Test(expected = Exception::class)
+    fun testAddStringWithNegativeNumberShouldThrowError() {
+        add("1,-1")
     }
 }
