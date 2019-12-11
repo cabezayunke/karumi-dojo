@@ -1,6 +1,5 @@
 package training.accenture.com.karumi_dojo
 
-import training.accenture.com.karumi_dojo.StringCalculator;
 import org.junit.Test
 
 import org.junit.Assert.*
