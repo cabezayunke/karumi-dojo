@@ -70,7 +70,7 @@ class StringCalculatorTest {
     @Test
     fun testAddStringWithNewLineAndComma() {
         val result = add("11\n22,33")
-        assertEquals(67, result)
+        assertEquals(66, result)
     }
     @Test
     fun testAddStringWithNewLineAtTheEnd() {
