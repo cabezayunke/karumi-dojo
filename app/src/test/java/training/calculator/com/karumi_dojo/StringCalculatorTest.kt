@@ -1,4 +1,4 @@
-package training.accenture.com.karumi_dojo
+package training.calculator.com.karumi_dojo
 
 import org.junit.Test
 

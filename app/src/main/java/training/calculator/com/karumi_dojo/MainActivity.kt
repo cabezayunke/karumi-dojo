@@ -1,19 +1,20 @@
-package training.accenture.com.karumi_dojo
+package training.calculator.com.karumi_dojo
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
-import training.accenture.com.karumi_dojo.model.AuthService
-import training.accenture.com.karumi_dojo.presenter.MainPresenter
-import training.accenture.com.karumi_dojo.utils.Clock
-import training.accenture.com.karumi_dojo.view.MainView
+import training.calculator.com.karumi_dojo.R
+import training.calculator.com.karumi_dojo.model.AuthService
+import training.calculator.com.karumi_dojo.presenter.MainPresenter
+import training.calculator.com.karumi_dojo.utils.Clock
+import training.calculator.com.karumi_dojo.view.MainView
 
 class MainActivity : AppCompatActivity(), MainView {
 
     var viewLogin: LinearLayout ?= null
     var viewLogout: LinearLayout ?= null
-    var presenter: MainPresenter ?= null
+    var presenter: MainPresenter?= null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

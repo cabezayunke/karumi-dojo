@@ -1,6 +1,6 @@
-package training.accenture.com.karumi_dojo.model
+package training.calculator.com.karumi_dojo.model
 
-import training.accenture.com.karumi_dojo.utils.Clock
+import training.calculator.com.karumi_dojo.utils.Clock
 
 class AuthService(val clock: Clock) {
     fun login(username: String, password: String): Boolean = username == "admin" && password == "admin"

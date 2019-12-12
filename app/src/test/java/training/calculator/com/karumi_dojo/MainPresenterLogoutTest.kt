@@ -1,12 +1,12 @@
-package training.accenture.com.karumi_dojo
+package training.calculator.com.karumi_dojo
 
 import org.junit.Test
 
 import org.junit.Assert.*
-import training.accenture.com.karumi_dojo.model.AuthService
-import training.accenture.com.karumi_dojo.presenter.MainPresenter
-import training.accenture.com.karumi_dojo.utils.MockClock
-import training.accenture.com.karumi_dojo.view.MockMainView
+import training.calculator.com.karumi_dojo.model.AuthService
+import training.calculator.com.karumi_dojo.presenter.MainPresenter
+import training.calculator.com.karumi_dojo.utils.MockClock
+import training.calculator.com.karumi_dojo.view.MockMainView
 import java.util.*
 
 

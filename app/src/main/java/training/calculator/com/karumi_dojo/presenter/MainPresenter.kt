@@ -1,7 +1,7 @@
-package training.accenture.com.karumi_dojo.presenter
+package training.calculator.com.karumi_dojo.presenter
 
-import training.accenture.com.karumi_dojo.model.AuthService
-import training.accenture.com.karumi_dojo.view.MainView
+import training.calculator.com.karumi_dojo.model.AuthService
+import training.calculator.com.karumi_dojo.view.MainView
 
 class MainPresenter(val service: AuthService, val view: MainView) {
 

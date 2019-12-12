@@ -1,4 +1,4 @@
-package training.accenture.com.karumi_dojo
+package training.calculator.com.karumi_dojo
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getTargetContext()
-        assertEquals("training.accenture.com.karumi_dojo", appContext.packageName)
+        assertEquals("training.calculator.com.karumi_dojo", appContext.packageName)
     }
 }

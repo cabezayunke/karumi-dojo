@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
-
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'jacoco'
+
 
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "training.accenture.com.karumi_dojo"
+        applicationId "training.calculator.com.karumi_dojo"
         minSdkVersion 22
         targetSdkVersion 28
         versionCode 1

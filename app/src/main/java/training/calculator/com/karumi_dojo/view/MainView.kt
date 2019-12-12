@@ -1,4 +1,4 @@
-package training.accenture.com.karumi_dojo.view
+package training.calculator.com.karumi_dojo.view
 
 interface MainView {
     fun onLoginSuccess()

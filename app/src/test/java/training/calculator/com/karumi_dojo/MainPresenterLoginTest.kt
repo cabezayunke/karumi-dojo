@@ -1,15 +1,15 @@
-package training.accenture.com.karumi_dojo
+package training.calculator.com.karumi_dojo
 
-import training.accenture.com.karumi_dojo.model.AuthService;
+import training.calculator.com.karumi_dojo.model.AuthService;
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
 
 
 import org.junit.Assert.*
-import training.accenture.com.karumi_dojo.presenter.MainPresenter
-import training.accenture.com.karumi_dojo.utils.MockClock
-import training.accenture.com.karumi_dojo.view.MockMainView
+import training.calculator.com.karumi_dojo.presenter.MainPresenter
+import training.calculator.com.karumi_dojo.utils.MockClock
+import training.calculator.com.karumi_dojo.view.MockMainView
 
 
 @RunWith(Parameterized::class)
@@ -17,8 +17,8 @@ class MainPresenterLoginTest(private val username: String, private val password:
 
     var mockView = MockMainView()
     val presenter: MainPresenter = MainPresenter(
-        AuthService(MockClock()),
-        mockView
+            AuthService(MockClock()),
+            mockView
     )
 
     companion object {

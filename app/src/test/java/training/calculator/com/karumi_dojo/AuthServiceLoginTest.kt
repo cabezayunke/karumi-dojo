@@ -1,13 +1,13 @@
-package training.accenture.com.karumi_dojo
+package training.calculator.com.karumi_dojo
 
-import training.accenture.com.karumi_dojo.model.AuthService;
+import training.calculator.com.karumi_dojo.model.AuthService;
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
 
 
 import org.junit.Assert.*
-import training.accenture.com.karumi_dojo.utils.MockClock
+import training.calculator.com.karumi_dojo.utils.MockClock
 
 
 @RunWith(Parameterized::class)
